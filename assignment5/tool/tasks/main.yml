@@ -1,0 +1,7 @@
+---
+# tasks file for tool
+- name: install
+  include_tasks: mysql_install.yml
+- name: change in the config file
+  include_tasks: conf.yml
+

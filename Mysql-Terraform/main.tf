@@ -23,7 +23,7 @@ module "netwoking" {
     vpc_peering_name         = var.vpc_peering_name
 }
 
-module "Security" {
+module "security" {
     source = "./security"
     bastion_instance_name       = var.bastion_instance_name
     pvt_instance_name           = var.pvt_instance_name

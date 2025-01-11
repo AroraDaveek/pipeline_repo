@@ -1,4 +1,4 @@
-module "netwoking" {
+module "network" {
     source = "./network"
     vpc_cidr                 = var.vpc_cidr
     vpc_name                 = var.vpc_name
@@ -31,9 +31,9 @@ module "security" {
     instance_type               = var.instance_type
     sec_grp                     = var.sec_grp
     key_name                    = var.key_name
-    pub_sub_id                  = module.netwoking.pub_subnet_id[0]
-    pvt_sub_id                  = module.netwoking.pvt_subnet_id
-    vpc_id                      = module.netwoking.vpc_id
+    pub_sub_id                  = module.network.pub_subnet_id[0]
+    pvt_sub_id                  = module.network.pvt_subnet_id
+    vpc_id                      = module.network.vpc_id
     inbound_ports               = var.inbound_ports
     outbound_ports              = var.outbound_ports
     associate_public_ip_address = var.associate_public_ip_address
